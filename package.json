@@ -26,6 +26,7 @@
   "homepage": "https://github.com/evetstech/react-native-settings-list#readme",
   "devDependencies": {
     "react-native": ">=0.18.0",
+    "expo": ">=24.0.0",
     "react": ">=0.14.0"
   },
   "dependencies": {

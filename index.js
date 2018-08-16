@@ -3,6 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import createReactClass from 'create-react-class';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import {
   View,
@@ -16,7 +17,7 @@ import {
   ViewPropTypes
 } from 'react-native';
 
-const ARROW_ICON = require('./img/icon-arrow-settings.png');
+const ARROW_ICON = 'chevron-right';
 
 class SettingsList extends React.Component {
   static propTypes = {
@@ -236,7 +237,7 @@ class SettingsList extends React.Component {
     }
 
     if(item.hasNavArrow){
-        return <Image style={[styles.rightSide, item.arrowStyle]} source={ARROW_ICON} />;
+        return <MaterialCommunityIcons size={item.arrowStyle.width} name={ARROW_ICON} color={item.arrowStyle.color} />;
     }
 
     return null;
