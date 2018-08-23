@@ -3,6 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import createReactClass from 'create-react-class';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import {
   View,
@@ -239,21 +240,11 @@ class SettingsList extends React.Component {
       return null;
     }
 
-    if (item.withExpo) {
-      const MaterialCommunityIcons = require('@expo/vector-icons').MaterialCommunityIcons;
-      return  <MaterialCommunityIcons 
-        size={item.arrowStyle.width} 
-        name={ARROW_ICON} 
-        color={item.arrowStyle.color} 
-      />;
-    } else {
-      const MaterialCommunityIcons = require('react-native-vector-icons').default;
-      return  <MaterialCommunityIcons 
-        size={item.arrowStyle.width} 
-        name={ARROW_ICON} 
-        color={item.arrowStyle.color} 
-      />;
-    }
+    return <MaterialCommunityIcons 
+      size={item.arrowStyle.width} 
+      name={ARROW_ICON} 
+      color={item.arrowStyle.color} 
+    />;
   }
 }
 module.exports = SettingsList;
